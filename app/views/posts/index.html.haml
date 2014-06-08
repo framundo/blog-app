@@ -1,0 +1,6 @@
+.new-post= link_to 'New Post', new_post_path, class: 'btn btn-primary'
+
+%h2 Posts:
+%ul.list-group
+  - @posts.each do |p|
+    %li.list-group-item= link_to p.title, p

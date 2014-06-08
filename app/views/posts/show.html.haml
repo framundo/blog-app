@@ -1,0 +1,8 @@
+= link_to 'Back', posts_path, class: 'btn btn-default'
+%h1= @post.title
+%p.well= @post.description
+%ul.list-group
+  - @post.comments.each do |c|
+    %li.list-group-item
+      .comment-user.label.label-info= c.user.email
+      .comment-text= c.text
